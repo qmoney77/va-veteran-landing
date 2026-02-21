@@ -36,8 +36,8 @@ import {
   ArrowRight,
 } from "lucide-react";
 
-const PHONE = "(800) 555-0199";
-const PHONE_HREF = "tel:+18005550199";
+const PHONE = "(877) 739-3610";
+const PHONE_HREF = "tel:+18777393610";
 
 const LOGO_URL =
   "https://files.manuscdn.com/user_upload_by_module/session_file/310519663209850724/TqyicfrLqnGSvHnK.png";
