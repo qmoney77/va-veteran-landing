@@ -1,42 +1,85 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1" />
-    <!-- Mobile browser chrome color — matches nav bar -->
-    <meta name="theme-color" content="#1a2744" />
-    <title>VA-Veteran.Life | Life Insurance for Veterans &amp; Military Families</title>
-    <meta name="description" content="Life insurance for veterans, retirees, and their families. No war exclusions. Coverage starting at $2 a day. Call (800) 555-0199." />
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VA-Veteran.Life | Life Insurance for Veterans</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Source Sans 3', sans-serif; }
+        h1, h2, h3 { font-family: 'Playfair Display', serif; }
+        .navy-bg { background-color: #1a2744; }
+        .gold-text { color: #d4af37; }
+        .gold-bg { background-color: #d4af37; }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-900 pb-20 md:pb-0">
 
-    <!-- Preconnect for fast font loading (font-display=swap keeps text visible) -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800&family=Source+Sans+3:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <nav class="navy-bg text-white p-4 sticky top-0 z-50 shadow-lg border-b border-yellow-600/30">
+        <div class="max-w-6xl mx-auto flex justify-between items-center">
+            <div class="font-bold text-xl tracking-tight">VA-VETERAN.LIFE</div>
+            <a href="tel:+18777393610" class="gold-bg text-slate-900 px-4 py-2 rounded font-bold text-sm hover:brightness-110">
+                CALL: (877) 739-3610
+            </a>
+        </div>
+    </nav>
 
-    <!-- Preconnect to image CDNs for faster hero image load -->
-    <link rel="preconnect" href="https://images.unsplash.com" />
-    <link rel="preconnect" href="https://files.manuscdn.com" />
+    <section class="navy-bg text-white py-16 md:py-24 px-4 text-center relative overflow-hidden">
+        <div class="max-w-4xl mx-auto relative z-10">
+            <span class="gold-text font-bold tracking-widest uppercase text-sm">Honoring Your Service</span>
+            <h1 class="text-4xl md:text-6xl mb-6 mt-2">Protecting Those Who Served</h1>
+            <p class="text-xl mb-8 text-slate-300 max-w-2xl mx-auto">Final Expense Life Insurance designed specifically for Veterans & Military Families. Coverage starting at $2 a day.</p>
+            <a href="tel:+18777393610" class="gold-bg text-slate-900 px-10 py-5 rounded-lg font-bold text-xl inline-block shadow-2xl hover:scale-105 transition-transform">
+                Get Your Free Quote Now
+            </a>
+            <div class="mt-8 flex flex-wrap justify-center gap-4 text-sm text-slate-400">
+                <span>✓ No Medical Exam</span>
+                <span>✓ No War Exclusions</span>
+                <span>✓ All Branches Covered</span>
+            </div>
+        </div>
+    </section>
 
-    <!-- Preload hero image (LCP element) for fastest possible first paint -->
-    <link
-      rel="preload"
-      as="image"
-      href="https://images.unsplash.com/photo-1580130379624-3a069adbffc5?w=800&q=70"
-      media="(max-width: 767px)"
-    />
-    <link
-      rel="preload"
-      as="image"
-      href="https://images.unsplash.com/photo-1580130379624-3a069adbffc5?w=1400&q=75"
-      media="(min-width: 768px)"
-    />
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/main.tsx"></script>
-    <script
-      defer
-      src="%VITE_ANALYTICS_ENDPOINT%/umami"
-      data-website-id="%VITE_ANALYTICS_WEBSITE_ID%"></script>
-  </body>
+    <section class="py-16 px-4 max-w-6xl mx-auto grid md:grid-cols-3 gap-8">
+        <div class="bg-white p-8 rounded-xl shadow-sm border-b-4 border-yellow-600">
+            <div class="text-3xl mb-4">🎖️</div>
+            <h3 class="text-2xl mb-4 text-slate-800">Veteran Focused</h3>
+            <p class="text-slate-600 leading-relaxed">We understand the unique needs of the military community. No red tape, just the protection your family deserves.</p>
+        </div>
+        <div class="bg-white p-8 rounded-xl shadow-sm border-b-4 border-yellow-600">
+            <div class="text-3xl mb-4">🔒</div>
+            <h3 class="text-2xl mb-4 text-slate-800">Locked-In Rates</h3>
+            <p class="text-slate-600 leading-relaxed">Your premiums will never increase, and your coverage amount will never decrease as long as premiums are paid.</p>
+        </div>
+        <div class="bg-white p-8 rounded-xl shadow-sm border-b-4 border-yellow-600">
+            <div class="text-3xl mb-4">⚡</div>
+            <h3 class="text-2xl mb-4 text-slate-800">Rapid Approval</h3>
+            <p class="text-slate-600 leading-relaxed">Skip the needles and waiting rooms. Most applicants are approved in minutes, not weeks.</p>
+        </div>
+    </section>
+
+    <div class="bg-yellow-50 py-12 px-4 text-center border-y border-yellow-200">
+        <h2 class="text-3xl mb-4 text-slate-800">Ready to Speak with a Licensed Specialist?</h2>
+        <p class="mb-6 text-slate-600">Our team is standing by to help you find the right plan for your budget.</p>
+        <a href="tel:+18777393610" class="text-3xl md:text-5xl font-bold text-blue-900 hover:text-blue-700 transition">
+            (877) 739-3610
+        </a>
+    </div>
+
+    <footer class="navy-bg text-slate-400 py-16 px-4 text-sm border-t border-slate-800">
+        <div class="max-w-4xl mx-auto text-center">
+            <p class="mb-6 leading-relaxed">VA-Veteran.Life is a private website and is not affiliated with, endorsed by, or a part of the Department of Veterans Affairs or any other government agency.</p>
+            <p class="mb-2 uppercase font-bold tracking-widest text-slate-500">Service • Integrity • Protection</p>
+            <p>© 2026 VA-Veteran.Life. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <div class="md:hidden fixed bottom-0 left-0 right-0 p-4 bg-white/90 backdrop-blur-md border-t border-slate-200 z-50">
+        <a href="tel:+18777393610" class="gold-bg text-slate-900 block text-center py-4 rounded-lg font-bold text-lg shadow-xl active:scale-95 transition-transform">
+            📞 CALL NOW: (877) 739-3610
+        </a>
+    </div>
+
+</body>
 </html>
