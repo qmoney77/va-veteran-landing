@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1" />
+    <!-- Mobile browser chrome color — matches nav bar -->
+    <meta name="theme-color" content="#1a2744" />
+    <title>VA-Veteran.Life | Life Insurance for Veterans &amp; Military Families</title>
+    <meta name="description" content="Life insurance for veterans, retirees, and their families. No war exclusions. Coverage starting at $2 a day. Call (800) 555-0199." />
+
+    <!-- Preconnect for fast font loading (font-display=swap keeps text visible) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800&family=Source+Sans+3:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+    <!-- Preconnect to image CDNs for faster hero image load -->
+    <link rel="preconnect" href="https://images.unsplash.com" />
+    <link rel="preconnect" href="https://files.manuscdn.com" />
+
+    <!-- Preload hero image (LCP element) for fastest possible first paint -->
+    <link
+      rel="preload"
+      as="image"
+      href="https://images.unsplash.com/photo-1580130379624-3a069adbffc5?w=800&q=70"
+      media="(max-width: 767px)"
+    />
+    <link
+      rel="preload"
+      as="image"
+      href="https://images.unsplash.com/photo-1580130379624-3a069adbffc5?w=1400&q=75"
+      media="(min-width: 768px)"
+    />
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+    <script
+      defer
+      src="%VITE_ANALYTICS_ENDPOINT%/umami"
+      data-website-id="%VITE_ANALYTICS_WEBSITE_ID%"></script>
+  </body>
+</html>
