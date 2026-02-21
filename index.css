@@ -1,0 +1,183 @@
+/* ============================================================
+   VA-Veteran.Life Design System
+   Philosophy: "Duty & Trust" — Military Gravitas with Warm Humanity
+   Palette: Deep Navy + Warm Gold + Sage Green + Off-White
+   Fonts: Playfair Display (headings) + Source Sans 3 (body)
+   ============================================================ */
+
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-navy: var(--navy);
+  --color-gold: var(--gold);
+  --color-sage: var(--sage);
+}
+
+:root {
+  --radius: 0.5rem;
+  --navy: oklch(0.22 0.06 255);
+  --gold: oklch(0.72 0.12 75);
+  --sage: oklch(0.68 0.04 160);
+  --sage-light: oklch(0.88 0.03 160);
+  --charcoal: oklch(0.25 0.01 255);
+
+  --background: oklch(0.98 0.005 80);
+  --foreground: oklch(0.15 0.01 255);
+  --card: oklch(1 0 0);
+  --card-foreground: oklch(0.15 0.01 255);
+  --popover: oklch(1 0 0);
+  --popover-foreground: oklch(0.15 0.01 255);
+
+  /* Primary = Navy */
+  --primary: oklch(0.22 0.06 255);
+  --primary-foreground: oklch(0.98 0 0);
+
+  /* Secondary = Sage */
+  --secondary: oklch(0.88 0.03 160);
+  --secondary-foreground: oklch(0.22 0.06 255);
+
+  --muted: oklch(0.95 0.005 80);
+  --muted-foreground: oklch(0.5 0.01 255);
+
+  /* Accent = Gold */
+  --accent: oklch(0.72 0.12 75);
+  --accent-foreground: oklch(0.15 0.01 255);
+
+  --destructive: oklch(0.577 0.245 27.325);
+  --destructive-foreground: oklch(0.985 0 0);
+  --border: oklch(0.88 0.005 255);
+  --input: oklch(0.88 0.005 255);
+  --ring: oklch(0.22 0.06 255);
+
+  --sidebar: oklch(0.22 0.06 255);
+  --sidebar-foreground: oklch(0.98 0 0);
+  --sidebar-primary: oklch(0.72 0.12 75);
+  --sidebar-primary-foreground: oklch(0.15 0.01 255);
+  --sidebar-accent: oklch(0.3 0.06 255);
+  --sidebar-accent-foreground: oklch(0.98 0 0);
+  --sidebar-border: oklch(0.3 0.04 255);
+  --sidebar-ring: oklch(0.72 0.12 75);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+  h1, h2, h3 {
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    line-height: 1.15;
+  }
+  h4, h5, h6 {
+    font-family: 'Source Sans 3', sans-serif;
+    font-weight: 600;
+  }
+  button:not(:disabled),
+  [role="button"]:not([aria-disabled="true"]),
+  [type="button"]:not(:disabled),
+  [type="submit"]:not(:disabled),
+  a[href] {
+    @apply cursor-pointer;
+  }
+}
+
+@layer components {
+  .container {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+  .flex {
+    min-height: 0;
+    min-width: 0;
+  }
+
+  /* Hide scrollbar for trust bar horizontal scroll on mobile */
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  @media (min-width: 640px) {
+    .container {
+      padding-left: 1.5rem;
+      padding-right: 1.5rem;
+    }
+  }
+  @media (min-width: 1024px) {
+    .container {
+      padding-left: 2rem;
+      padding-right: 2rem;
+      max-width: 1280px;
+    }
+  }
+
+  /* Gold accent underline for section headings */
+  .heading-underline::after {
+    content: '';
+    display: block;
+    width: 56px;
+    height: 3px;
+    background: oklch(0.72 0.12 75);
+    margin-top: 12px;
+  }
+
+  /* Phone CTA button — pulse animation on mobile */
+  .phone-pulse {
+    animation: phonePulse 2.5s ease-in-out infinite;
+  }
+  @keyframes phonePulse {
+    0%, 100% { box-shadow: 0 0 0 0 oklch(0.72 0.12 75 / 0.5); }
+    50% { box-shadow: 0 0 0 10px oklch(0.72 0.12 75 / 0); }
+  }
+
+  /* Star watermark background pattern */
+  .star-bg {
+    background-image: url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M20 2l2.4 7.4H30l-6.2 4.5 2.4 7.4L20 17l-6.2 4.3 2.4-7.4L10 9.4h7.6z' fill='%23ffffff' fill-opacity='0.04'/%3E%3C/svg%3E");
+  }
+
+  /* Chevron decorative element */
+  .chevron-gold::before {
+    content: '›';
+    color: oklch(0.72 0.12 75);
+    font-weight: 700;
+    margin-right: 8px;
+  }
+}
